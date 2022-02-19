@@ -1,0 +1,10 @@
+name: test
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    steps:
+      run: docker build -t rvrbk/docker-react -f Dockerfile.dev .
+      run: docker run -e CI=true rvrbk/docker-react npm run test
