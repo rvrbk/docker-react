@@ -19,8 +19,8 @@
           - name: beanstalk
             uses: rvrbk/beanstalk-deploy@v20
             with:
-              aws_access_key: ${{ docker-react.AWS_ACCESS_KEY }}
-              aws_secret_key: ${{ docker-react.AWS_SECRET_ACCESS_KEY }}
+              aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+              aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
               application_name: docker-react
               environment_name: Dockerreact-env
               existing_bucket_name: elasticbeanstalk-us-east-1-252439019993
