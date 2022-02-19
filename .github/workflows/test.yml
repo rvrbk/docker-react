@@ -6,6 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build dockerfile
-      run: docker build -t rvrbk/react-test -f ./client/Dockerfile.dev ./client
+      run: docker build -t rvrbk/react-test -f Dockerfile.dev .
     - name: Run tests
       run: docker run -e CI=true rvrbk/react-test npm test
